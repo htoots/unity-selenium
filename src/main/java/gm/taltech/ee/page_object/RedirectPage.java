@@ -21,14 +21,21 @@ public class RedirectPage {
         return driver.getCurrentUrl().equals("https://the-internet.herokuapp.com/status_codes");
     }
 
-    public boolean isStatus202Correct(){
+    public boolean isStatus200Correct(){
         driver.findElement(status200).click();
         return driver.getCurrentUrl().equals("https://the-internet.herokuapp.com/status_codes/200");
     }
 
     public boolean isStatus404Correct(){
+        //go back to previous page
+        driver.get("https://the-internet.herokuapp.com/status_codes");
         driver.findElement(status404).click();
         return driver.getCurrentUrl().equals("https://the-internet.herokuapp.com/status_codes/404");
+    }
+
+    public boolean isHeaderCorrect(){
+        driver.get("https://the-internet.herokuapp.com/status_codes");
+        return driver.findElement(header).getText().equals("Status Codes");
     }
 
 
