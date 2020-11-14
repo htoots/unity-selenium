@@ -8,6 +8,7 @@ public class HomePage {
     private By mainTitle = By.tagName("h1");
 
     private By dropdownLink = By.linkText("Dropdown");
+    private By redirectLink = By.linkText("Redirect");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -25,5 +26,10 @@ public class HomePage {
     public DropdownPage goToDropdownPage() {
         driver.findElement(dropdownLink).click();
         return new DropdownPage(driver);
+    }
+
+    public RedirectPage goToRedirectPage(){
+        driver.findElement(redirectLink).click();
+        return new RedirectPage(driver);
     }
 }
