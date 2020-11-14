@@ -15,7 +15,8 @@ public class RedirectTest extends SeleniumTest{
         // Test 1: Is it directed correctly
         assertThat(redirectPage.isAt(), is(true));
 
-        //
+        //Test2: Is header correct
+        assertThat(redirectPage.isHeaderCorrect(), is(true));
 
         //Test3: Is status 200
         assertThat(redirectPage.isStatus200Correct(), is(true));
@@ -23,7 +24,7 @@ public class RedirectTest extends SeleniumTest{
         //Test4: Is status 404
         assertThat(redirectPage.isStatus404Correct(), is(true));
 
-        assertThat(redirectPage.isHeaderCorrect(), is(true));
+
 
     }
 
