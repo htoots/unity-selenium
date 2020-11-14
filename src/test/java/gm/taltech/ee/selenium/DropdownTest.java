@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class SeleniumTestCases extends SeleniumTest {
+public class DropdownTest extends SeleniumTest {
 
     // Case 1
     @Test
@@ -28,5 +28,5 @@ public class SeleniumTestCases extends SeleniumTest {
         // Test 4: Unable to click on placeholder option, value from before is retained
         assertThat(dropdownPage.chooseOption("Please select an option"), is("Option 2"));
     }
-
+    
 }
