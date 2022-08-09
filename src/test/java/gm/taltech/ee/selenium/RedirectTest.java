@@ -1,11 +1,12 @@
-package gm.taltech.ee.selenium.common;
+package gm.taltech.ee.selenium;
 import gm.taltech.ee.page_object.RedirectPage;
+import gm.taltech.ee.selenium.common.SeleniumTest;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class RedirectTest extends SeleniumTest{
+public class RedirectTest extends SeleniumTest {
 
 
     @Test
